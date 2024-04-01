@@ -21,13 +21,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnMove = findViewById(R.id.btnMove);
         Button btnShare = findViewById(R.id.btnShare);
         Button btnWeb = findViewById(R.id.open_website_button);
         Button btnMap = findViewById(R.id.open_location_button);
         mWebsiteEditText = findViewById(R.id.website_edittext);
         mLocationEditText = findViewById(R.id.location_edittext);
-
         Button btnOpenActivity = findViewById(R.id.btnMove);
 
         // Menambahkan listener klik pada tombol
