@@ -28,12 +28,22 @@ public class MainActivity extends AppCompatActivity {
         mWebsiteEditText = findViewById(R.id.website_edittext);
         mLocationEditText = findViewById(R.id.location_edittext);
 
-        btnMove.setOnClickListener(v -> {
-// Perintah Intent Explicit pindah halaman ke activity_detail
+        Button btnOpenActivity = findViewById(R.id.btnMove);
 
-            Intent i = new Intent(MainActivity.this,DetailActivity.class);
-            i.putExtra("isiData","Kiriman dari halaman pertama");
-            startActivity(i);
+        // Menambahkan listener klik pada tombol
+        btnOpenActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Membuat Intent untuk membuka TujuanActivity
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+
+                // Menambahkan data tambahan ke Intent
+                intent.putExtra("key_nama", "Abdul Majid");
+                intent.putExtra("key_umur", 25);
+
+                // Memulai aktivitas tujuan dengan Intent yang telah disiapkan
+                startActivity(intent);
+            }
         });
 
         btnShare.setOnClickListener(v -> {
