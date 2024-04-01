@@ -29,9 +29,8 @@ public class MainActivity extends AppCompatActivity {
         Button btnOpenActivity = findViewById(R.id.btnMove);
 
         // Menambahkan listener klik pada tombol
-        btnOpenActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnOpenActivity.setOnClickListener(v ->{
+
                 // Membuat Intent untuk membuka TujuanActivity
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
 
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Memulai aktivitas tujuan dengan Intent yang telah disiapkan
                 startActivity(intent);
-            }
+
         });
 
         btnShare.setOnClickListener(v -> {
